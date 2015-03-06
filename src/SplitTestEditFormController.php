@@ -1,15 +1,13 @@
 <?php
+
 /**
- * Created by PhpStorm.
- * User: sam
- * Date: 6/03/15
- * Time: 3:31 PM
+ * @file
+ * Contains \Drupal\split_test\SplitTestEditFormController.
  */
 
 namespace Drupal\SplitTest;
 
 use Drupal\Core\Entity\EntityForm;
-use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Form\ConfigFormBaseTrait;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -39,18 +37,18 @@ class SplitTestEditFormController extends EntityForm  {
       '#description' => $this->t("Example: 'New layout' or 'Changing heading color'."),
       '#required' => TRUE,
     );
-    $form['first_theme'] = array(
+    $form['first'] = array(
       '#type' => 'textarea',
       '#title' => $this->t('First Theme'),
       '#default_value' => $split_test->getFirstTheme(),
       '#description' => $this->t("Select the first theme to be split tested"),
       '#required' => TRUE,
     );
-    $form['second_theme'] = array(
+    $form['second'] = array(
       '#type' => 'textarea',
       '#title' => $this->t('Second Theme'),
       '#default_value' => $split_test->getSecondTheme(),
-      '#description' => $this->t('Select the secod theme to be split tested.'),
+      '#description' => $this->t('Select the secoNd theme to be split tested.'),
     );
 
     return $form;

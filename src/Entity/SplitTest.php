@@ -7,7 +7,6 @@
 
 namespace Drupal\SplitTest\Entity;
 
-
 use Drupal\SplitTest\SplitTestInterface;
 use Drupal\Core\Config\Entity\ConfigEntityBase;
 
@@ -54,12 +53,28 @@ class SplitTest extends ConfigEntityBase implements SplitTestInterface {
    *
    * @var string
    */
-  public $first_theme;
+  public $first;
 
   /**
    * The name of second theme involved in the split test.
    *
    * @var string
    */
-  public $second_theme;
+  public $second;
+
+
+  /**
+   * @return string
+   */
+  public function getFirstTheme() {
+    return $this->first;
+  }
+
+  /**
+   * @return string
+   */
+  public function getSecondTheme() {
+    return $this->second;
+  }
+
 }

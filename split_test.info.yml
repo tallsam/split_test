@@ -1,0 +1,7 @@
+name: Split Test
+type: module
+description: Allows A/B split testing Drupal themes
+core: 8.x
+package: Marketing
+
+dependencies:

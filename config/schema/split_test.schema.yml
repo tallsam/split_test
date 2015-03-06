@@ -1,0 +1,16 @@
+split_test.test.*:
+  type: config_entity
+  label: 'SplitTest configuration'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    first:
+      type: string
+      label: 'First Theme'
+    second:
+      type: string
+      label: 'Second Theme'
